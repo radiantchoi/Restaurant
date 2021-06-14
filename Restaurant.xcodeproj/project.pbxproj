@@ -17,6 +17,7 @@
 		4F1320092677AB7400DA5885 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1320082677AB7400DA5885 /* OrderTableViewController.swift */; };
 		4F13200B2677AC4000DA5885 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F13200A2677AC4000DA5885 /* MenuItemDetailViewController.swift */; };
 		4F13200D2677AD9400DA5885 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F13200C2677AD9400DA5885 /* MenuItem.swift */; };
+		4F13200F2677B2DF00DA5885 /* IntermediaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F13200E2677B2DF00DA5885 /* IntermediaryModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4F1320082677AB7400DA5885 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		4F13200A2677AC4000DA5885 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
 		4F13200C2677AD9400DA5885 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		4F13200E2677B2DF00DA5885 /* IntermediaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediaryModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				4F13200C2677AD9400DA5885 /* MenuItem.swift */,
+				4F13200E2677B2DF00DA5885 /* IntermediaryModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				4F1320072677AB4900DA5885 /* MenuTableViewController.swift in Sources */,
 				4F13200B2677AC4000DA5885 /* MenuItemDetailViewController.swift in Sources */,
 				4F1320092677AB7400DA5885 /* OrderTableViewController.swift in Sources */,
+				4F13200F2677B2DF00DA5885 /* IntermediaryModels.swift in Sources */,
 				4F131FEE26779D5300DA5885 /* AppDelegate.swift in Sources */,
 				4F131FF026779D5300DA5885 /* SceneDelegate.swift in Sources */,
 				4F1320052677AB2400DA5885 /* CategoryTableViewController.swift in Sources */,
