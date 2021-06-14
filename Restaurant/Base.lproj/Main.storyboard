@@ -104,14 +104,71 @@
                     <view key="view" contentMode="scaleToFill" id="hQD-I5-XFI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="eGj-98-hhQ">
+                                <rect key="frame" x="25" y="148" width="364" height="224"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dzL-h7-yGd">
+                                <rect key="frame" x="25" y="380" width="276" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZY-5d-0ua">
+                                <rect key="frame" x="309" y="380" width="80" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="A09-hF-hT5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Q-b3-j75">
+                                <rect key="frame" x="25" y="412" width="364" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5C-PI-A7F">
+                                <rect key="frame" x="25" y="775" width="364" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Add To Order">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Spe-X3-JmM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eGj-98-hhQ" firstAttribute="height" secondItem="hQD-I5-XFI" secondAttribute="height" multiplier="0.25" id="079-KP-eYY"/>
+                            <constraint firstItem="dzL-h7-yGd" firstAttribute="top" secondItem="eGj-98-hhQ" secondAttribute="bottom" constant="8" id="186-tG-62a"/>
+                            <constraint firstItem="Spe-X3-JmM" firstAttribute="trailing" secondItem="L5C-PI-A7F" secondAttribute="trailing" constant="25" id="2db-gD-Hj4"/>
+                            <constraint firstItem="YZY-5d-0ua" firstAttribute="top" secondItem="eGj-98-hhQ" secondAttribute="bottom" constant="8" id="6CL-bn-TXV"/>
+                            <constraint firstItem="Spe-X3-JmM" firstAttribute="trailing" secondItem="eGj-98-hhQ" secondAttribute="trailing" constant="25" id="D2p-hX-V1h"/>
+                            <constraint firstItem="Y1Q-b3-j75" firstAttribute="top" secondItem="dzL-h7-yGd" secondAttribute="bottom" constant="8" id="DvX-Pu-icL"/>
+                            <constraint firstItem="Spe-X3-JmM" firstAttribute="trailing" secondItem="Y1Q-b3-j75" secondAttribute="trailing" constant="25" id="LCe-On-8fX"/>
+                            <constraint firstItem="L5C-PI-A7F" firstAttribute="leading" secondItem="Spe-X3-JmM" secondAttribute="leading" constant="25" id="NP7-Ay-Pbe"/>
+                            <constraint firstItem="YZY-5d-0ua" firstAttribute="leading" secondItem="dzL-h7-yGd" secondAttribute="trailing" constant="8" id="Oha-ih-y6f"/>
+                            <constraint firstItem="L5C-PI-A7F" firstAttribute="bottom" secondItem="Spe-X3-JmM" secondAttribute="bottom" constant="-8" id="ZLT-Uw-7zn"/>
+                            <constraint firstItem="Y1Q-b3-j75" firstAttribute="leading" secondItem="Spe-X3-JmM" secondAttribute="leading" constant="25" id="bEW-xw-PVP"/>
+                            <constraint firstItem="Spe-X3-JmM" firstAttribute="trailing" secondItem="YZY-5d-0ua" secondAttribute="trailing" constant="25" id="gdw-51-ow7"/>
+                            <constraint firstItem="eGj-98-hhQ" firstAttribute="top" secondItem="Spe-X3-JmM" secondAttribute="top" constant="8" id="gzO-5D-s6O"/>
+                            <constraint firstItem="eGj-98-hhQ" firstAttribute="leading" secondItem="Spe-X3-JmM" secondAttribute="leading" constant="25" id="hTP-2N-6v8"/>
+                            <constraint firstItem="dzL-h7-yGd" firstAttribute="leading" secondItem="Spe-X3-JmM" secondAttribute="leading" constant="25" id="js7-6Y-qdm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hgc-k1-VVU"/>
+                    <connections>
+                        <outlet property="addToOrderButton" destination="L5C-PI-A7F" id="Btc-z8-eIk"/>
+                        <outlet property="detailTextLabel" destination="Y1Q-b3-j75" id="64S-bS-Ejy"/>
+                        <outlet property="imageView" destination="eGj-98-hhQ" id="S5h-4r-sEH"/>
+                        <outlet property="priceLabel" destination="YZY-5d-0ua" id="lch-X2-CKY"/>
+                        <outlet property="titleLabel" destination="dzL-h7-yGd" id="6Qr-SF-J7s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mM-My-KzZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3072" y="-32"/>
+            <point key="canvasLocation" x="3071.0144927536235" y="-32.142857142857139"/>
         </scene>
         <!--Your Order-->
         <scene sceneID="gwK-ga-1vg">
@@ -198,9 +255,13 @@
     </scenes>
     <resources>
         <image name="book.fill" catalog="system" width="128" height="102"/>
+        <image name="placeholder" width="100" height="100"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
