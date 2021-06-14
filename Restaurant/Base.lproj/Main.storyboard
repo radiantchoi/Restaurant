@@ -81,6 +81,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Erq-WM-peh" kind="show" identifier="MenuDetailSegue" id="lXn-Pd-wvZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -104,6 +107,7 @@
                         <viewLayoutGuide key="safeArea" id="Spe-X3-JmM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Hgc-k1-VVU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mM-My-KzZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

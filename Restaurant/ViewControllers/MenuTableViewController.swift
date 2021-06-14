@@ -43,7 +43,7 @@ extension MenuTableViewController {
     private func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         let menuItem = menuItems[indexPath.row]
         cell.textLabel?.text = menuItem.name
-        cell.detailTextLabel?.text = "$\(menuItem.price)"
+        cell.detailTextLabel?.text = String(format: "$%.2f", menuItem.price)
     }
     
 }
@@ -64,14 +64,16 @@ extension MenuTableViewController {
         return cell
     }
 
+}
 
-    /*
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+extension MenuTableViewController {
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "MenuDetailSegue" {
+            let menuItemDetailViewController = segue.destination as! MenuItemDetailViewController
+            let index = tableView.indexPathForSelectedRow!.row
+            menuItemDetailViewController.menuItem = menuItems[index]
+        }
     }
-    */
 
 }

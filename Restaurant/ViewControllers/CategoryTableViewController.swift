@@ -59,7 +59,10 @@ extension CategoryTableViewController {
         return cell
     }
 
+}
 
+extension CategoryTableViewController {
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "MenuSegue" {
             let menuTableViewController = segue.destination as! MenuTableViewController

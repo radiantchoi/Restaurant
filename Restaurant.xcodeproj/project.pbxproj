@@ -95,8 +95,8 @@
 			children = (
 				4F1320042677AB2400DA5885 /* CategoryTableViewController.swift */,
 				4F1320062677AB4900DA5885 /* MenuTableViewController.swift */,
-				4F1320082677AB7400DA5885 /* OrderTableViewController.swift */,
 				4F13200A2677AC4000DA5885 /* MenuItemDetailViewController.swift */,
+				4F1320082677AB7400DA5885 /* OrderTableViewController.swift */,
 				4F1320122677B53600DA5885 /* MenuController.swift */,
 			);
 			path = ViewControllers;
