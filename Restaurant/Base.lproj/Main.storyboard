@@ -34,7 +34,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Dbf-BT-7Nj" kind="show" id="4Xj-PM-bYj"/>
+                                    <segue destination="Dbf-BT-7Nj" kind="show" identifier="MenuSegue" id="4Xj-PM-bYj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
