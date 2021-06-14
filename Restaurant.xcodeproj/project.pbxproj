@@ -16,6 +16,7 @@
 		4F1320072677AB4900DA5885 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1320062677AB4900DA5885 /* MenuTableViewController.swift */; };
 		4F1320092677AB7400DA5885 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1320082677AB7400DA5885 /* OrderTableViewController.swift */; };
 		4F13200B2677AC4000DA5885 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F13200A2677AC4000DA5885 /* MenuItemDetailViewController.swift */; };
+		4F13200D2677AD9400DA5885 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F13200C2677AD9400DA5885 /* MenuItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4F1320062677AB4900DA5885 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		4F1320082677AB7400DA5885 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		4F13200A2677AC4000DA5885 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
+		4F13200C2677AD9400DA5885 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		4F13200126779F0900DA5885 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4F13200C2677AD9400DA5885 /* MenuItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F13200D2677AD9400DA5885 /* MenuItem.swift in Sources */,
 				4F1320072677AB4900DA5885 /* MenuTableViewController.swift in Sources */,
 				4F13200B2677AC4000DA5885 /* MenuItemDetailViewController.swift in Sources */,
 				4F1320092677AB7400DA5885 /* OrderTableViewController.swift in Sources */,
