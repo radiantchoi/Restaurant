@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4F131FEE26779D5300DA5885 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F131FED26779D5300DA5885 /* AppDelegate.swift */; };
 		4F131FF026779D5300DA5885 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F131FEF26779D5300DA5885 /* SceneDelegate.swift */; };
-		4F131FF226779D5300DA5885 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F131FF126779D5300DA5885 /* ViewController.swift */; };
 		4F131FF526779D5300DA5885 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F131FF326779D5300DA5885 /* Main.storyboard */; };
 		4F131FF726779D5400DA5885 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F131FF626779D5400DA5885 /* Assets.xcassets */; };
 		4F131FFA26779D5400DA5885 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F131FF826779D5400DA5885 /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		4F131FEA26779D5300DA5885 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F131FED26779D5300DA5885 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4F131FEF26779D5300DA5885 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4F131FF126779D5300DA5885 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4F131FF426779D5300DA5885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4F131FF626779D5400DA5885 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F131FF926779D5400DA5885 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 		4F13200226779F0E00DA5885 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4F131FF126779D5300DA5885 /* ViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,7 +158,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F131FF226779D5300DA5885 /* ViewController.swift in Sources */,
 				4F131FEE26779D5300DA5885 /* AppDelegate.swift in Sources */,
 				4F131FF026779D5300DA5885 /* SceneDelegate.swift in Sources */,
 			);
@@ -312,7 +308,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5UNW2D34P;
-				INFOPLIST_FILE = Restaurant/Info.plist;
+				INFOPLIST_FILE = Restaurant/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,7 +327,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5UNW2D34P;
-				INFOPLIST_FILE = Restaurant/Info.plist;
+				INFOPLIST_FILE = Restaurant/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
