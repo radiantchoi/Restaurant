@@ -58,13 +58,37 @@
 			children = (
 				4F131FED26779D5300DA5885 /* AppDelegate.swift */,
 				4F131FEF26779D5300DA5885 /* SceneDelegate.swift */,
-				4F131FF126779D5300DA5885 /* ViewController.swift */,
 				4F131FF326779D5300DA5885 /* Main.storyboard */,
-				4F131FF626779D5400DA5885 /* Assets.xcassets */,
-				4F131FF826779D5400DA5885 /* LaunchScreen.storyboard */,
-				4F131FFB26779D5400DA5885 /* Info.plist */,
+				4F13200326779F1600DA5885 /* Assets */,
+				4F13200226779F0E00DA5885 /* ViewControllers */,
+				4F13200126779F0900DA5885 /* Models */,
 			);
 			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		4F13200126779F0900DA5885 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4F13200226779F0E00DA5885 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4F131FF126779D5300DA5885 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4F13200326779F1600DA5885 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4F131FFB26779D5400DA5885 /* Info.plist */,
+				4F131FF826779D5400DA5885 /* LaunchScreen.storyboard */,
+				4F131FF626779D5400DA5885 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
