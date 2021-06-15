@@ -10,8 +10,20 @@ import Foundation
 class MenuController {
     
     let baseURL = URL(string: "http://localhost:8090/")!
+    var order = Order() {
+        didSet {
+            NotificationCenter.default.post(name: MenuController.orderUpdatedNotification, object: nil)
+        }
+    }
     
     static let shared = MenuController()
+    static let orderUpdatedNotification = Notification.Name("MenuController.orderUpdated")
+    
+    
+    
+}
+
+extension MenuController {
     
     func fetchCategories(completion: @escaping ([String]?) -> Void) {
         let categoryURL = baseURL.appendingPathComponent("categories")
