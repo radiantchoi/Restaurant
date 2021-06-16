@@ -72,6 +72,10 @@ extension MenuTableViewController {
         configure(cell, forItemAt: indexPath)
         return cell
     }
+    
+    override func tableView(_ tableview: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 
 }
 
