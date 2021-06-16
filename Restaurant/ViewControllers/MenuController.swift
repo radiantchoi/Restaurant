@@ -157,6 +157,27 @@ extension MenuController {
         }
     }
     
+    func loadItems() {
+        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let menuItemsFileURL = documentsDirectoryURL.appendingPathComponent("menuItems").appendingPathExtension("json")
+        
+        guard let data = try? Data(contentsOf: menuItemsFileURL) else { return }
+        let items = (try? JSONDecoder().decode([MenuItem].self, from: data)) ?? []
+        
+        process(items)
+        
+    }
+    
+    func saveItems() {
+        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let menuItemsFileURL = documentsDirectoryURL.appendingPathComponent("menuItems").appendingPathExtension("json")
+        
+        let items = Array(itemsByID.values)
+        if let data = try? JSONEncoder().encode(items) {
+            try? data.write(to: menuItemsFileURL)
+        }
+    }
+    
 }
 
 extension MenuController {
