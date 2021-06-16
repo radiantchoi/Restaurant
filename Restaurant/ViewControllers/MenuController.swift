@@ -36,6 +36,7 @@ class MenuController {
 
 extension MenuController {
     
+    /*
     func fetchCategories(completion: @escaping ([String]?) -> Void) {
         let categoryURL = baseURL.appendingPathComponent("categories")
         
@@ -70,6 +71,7 @@ extension MenuController {
         
         task.resume()
     }
+    */
     
     func submitOrder(forMenuIDs menuIds: [Int], completion: @escaping (Int?) -> Void) {
         let orderURL = baseURL.appendingPathComponent("order")
@@ -107,6 +109,32 @@ extension MenuController {
         task.resume()
         
     }
+    
+    private func process(_ items: [MenuItem]) {
+        itemsByID.removeAll()
+        itemsByCategory.removeAll()
+        
+        for item in items {
+            itemsByID[item.id] = item
+            itemsByCategory[item.category, default: []].append(item)
+        }
+    }
+    
+    func loadRemoteData() {
+        let initialMenuURL = baseURL.appendingPathComponent("menu")
+        let components = URLComponents(url: initialMenuURL, resolvingAgainstBaseURL: true)!
+        let menuURL = components.url!
+        
+        let task = URLSession.shared.dataTask(with: menuURL) { (data, _, _) in
+            let jsonDecoder = JSONDecoder()
+            if let data = data, let menuItems = try? jsonDecoder.decode(MenuItems.self, from: data) {
+                self.process(menuItems.items)
+            }
+        }
+        
+        task.resume()
+    }
+    
 }
 
 

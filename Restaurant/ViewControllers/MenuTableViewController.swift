@@ -95,7 +95,7 @@ extension MenuTableViewController {
     
     override func encodeRestorableState(with coder: NSCoder) {
         super.encodeRestorableState(with: coder)
-        coder.encode(menuItem.id, forKey: "category")
+        coder.encode(category, forKey: "category")
     }
     
 }
