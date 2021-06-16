@@ -58,3 +58,12 @@ extension MenuItemDetailViewController {
     }
     
 }
+
+extension MenuItemDetailViewController {
+    
+    override func encodeRestorableState(with coder: NSCoder) {
+        super.encodeRestorableState(with: coder)
+        coder.encode(menuItem.id, forKey: "menuItemID")
+    }
+    
+}

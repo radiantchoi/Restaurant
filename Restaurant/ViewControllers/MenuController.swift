@@ -12,6 +12,7 @@ import UIKit
 class MenuController {
     
     let baseURL = URL(string: "http://localhost:8090/")!
+
     var order = Order() {
         didSet {
             NotificationCenter.default.post(name: MenuController.orderUpdatedNotification, object: nil)
@@ -21,7 +22,14 @@ class MenuController {
     static let shared = MenuController()
     static let orderUpdatedNotification = Notification.Name("MenuController.orderUpdated")
     
+    private var itemsByID = [Int: MenuItem]()
+    private var itemsByCategory = [String: [MenuItem]]()
     
+    var categories: [String] {
+        get {
+            return itemsByCategory.keys.sorted()
+        }
+    }
     
 }
 
@@ -119,6 +127,18 @@ extension MenuController {
         if let data = try? JSONEncoder().encode(order) {
             try? data.write(to: orderFileURL)
         }
+    }
+    
+}
+
+extension MenuController {
+    
+    func item(withID itemID: Int) -> MenuItem? {
+        return itemsByID[itemID]
+    }
+    
+    func items(forCategory category: String) -> [MenuItem]? {
+        return itemsByCategory[category]
     }
     
 }
