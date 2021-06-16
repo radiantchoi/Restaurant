@@ -66,4 +66,12 @@ extension MenuItemDetailViewController {
         coder.encode(menuItem.id, forKey: "menuItemID")
     }
     
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
+        
+        let menuItemID = Int(coder.decodeInt32(forKey: "menuItemID"))
+        menuItem = MenuController.shared.item(withID: menuItemID)!
+        updateUI()
+    }
+    
 }

@@ -95,4 +95,11 @@ extension MenuTableViewController {
         coder.encode(category, forKey: "category")
     }
     
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
+        
+        category = coder.decodeObject(forKey: "category") as! String
+        updateUI()
+    }
+    
 }
