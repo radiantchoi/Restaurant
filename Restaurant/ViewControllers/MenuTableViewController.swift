@@ -19,6 +19,9 @@ extension MenuTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: MenuController.menuDataUpdateNotification, object: nil)
+        
         updateUI()
     }
     
@@ -26,7 +29,7 @@ extension MenuTableViewController {
 
 extension MenuTableViewController {
     
-    private func updateUI() {
+    @objc private func updateUI() {
         title = category.capitalized
         menuItems = MenuController.shared.items(forCategory: category) ?? []
         

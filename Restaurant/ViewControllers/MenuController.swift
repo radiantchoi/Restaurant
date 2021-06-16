@@ -21,6 +21,7 @@ class MenuController {
     
     static let shared = MenuController()
     static let orderUpdatedNotification = Notification.Name("MenuController.orderUpdated")
+    static let menuDataUpdateNotification = Notification.Name("MenuController.menuDataUpdated")
     
     private var itemsByID = [Int: MenuItem]()
     private var itemsByCategory = [String: [MenuItem]]()
@@ -35,43 +36,6 @@ class MenuController {
 
 
 extension MenuController {
-    
-    /*
-    func fetchCategories(completion: @escaping ([String]?) -> Void) {
-        let categoryURL = baseURL.appendingPathComponent("categories")
-        
-        let task = URLSession.shared.dataTask(with: categoryURL) { (data, response, error) in
-            if let data = data,
-               let jsonDictionary = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
-               let categories = jsonDictionary["categories"] as? [String] {
-                completion(categories)
-            } else {
-                completion(nil)
-            }
-        }
-        
-        task.resume()
-    }
-    
-    func fetchMenuItems(forCategory categoryName: String, completion: @escaping ([MenuItem]?) -> Void) {
-        let initialMenuURL = baseURL.appendingPathComponent("menu")
-        var components = URLComponents(url: initialMenuURL, resolvingAgainstBaseURL: true)!
-        components.queryItems = [URLQueryItem(name: "category", value: categoryName)]
-        let menuURL = components.url!
-        
-        let task = URLSession.shared.dataTask(with: menuURL) { (data, response, error) in
-            let jsonDecoder = JSONDecoder()
-            if let data = data,
-               let menuItems = try? jsonDecoder.decode(MenuItems.self, from: data) {
-                completion(menuItems.items)
-            } else {
-                completion(nil)
-            }
-        }
-        
-        task.resume()
-    }
-    */
     
     func submitOrder(forMenuIDs menuIds: [Int], completion: @escaping (Int?) -> Void) {
         let orderURL = baseURL.appendingPathComponent("order")
@@ -117,6 +81,10 @@ extension MenuController {
         for item in items {
             itemsByID[item.id] = item
             itemsByCategory[item.category, default: []].append(item)
+        }
+        
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: MenuController.menuDataUpdateNotification, object: nil)
         }
     }
     

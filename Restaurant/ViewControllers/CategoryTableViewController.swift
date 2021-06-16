@@ -17,6 +17,9 @@ extension CategoryTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: MenuController.menuDataUpdateNotification, object: nil)
+        
         updateUI()
     }
     
@@ -24,7 +27,7 @@ extension CategoryTableViewController {
 
 extension CategoryTableViewController {
     
-    private func updateUI() {
+    @objc private func updateUI() {
         categories = MenuController.shared.categories
         
         tableView.reloadData()
