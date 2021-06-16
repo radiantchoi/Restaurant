@@ -28,6 +28,14 @@ extension AppDelegate {
         MenuController.shared.saveOrder()
     }
     
+    func application(_application: UIApplication, shouldSaveApplicationState: NSCoder) -> Bool {
+        return true
+    }
+    
+    func application(_application: UIApplication, shouldRestoreApplicationState: NSCoder) -> Bool {
+        return true
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
