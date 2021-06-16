@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 class MenuController {
     
     let baseURL = URL(string: "http://localhost:8090/")!
@@ -23,6 +24,7 @@ class MenuController {
     
     
 }
+
 
 extension MenuController {
     
@@ -97,4 +99,26 @@ extension MenuController {
         task.resume()
         
     }
+}
+
+
+extension MenuController {
+    
+    func loadOrder() {
+        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let orderFileURL = documentsDirectoryURL.appendingPathComponent("order").appendingPathExtension("json")
+        
+        guard let data = try? Data(contentsOf: orderFileURL) else { return }
+        order = (try? JSONDecoder().decode(Order.self, from: data)) ?? Order(menuItems: [])
+    }
+    
+    func saveOrder() {
+        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let orderFileURL = documentsDirectoryURL.appendingPathComponent("order").appendingPathExtension("json")
+        
+        if let data = try? JSONEncoder().encode(order) {
+            try? data.write(to: orderFileURL)
+        }
+    }
+    
 }
