@@ -31,12 +31,17 @@ extension SceneDelegate {
 extension SceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let temporaryDirectory = NSTemporaryDirectory()
+        
+        let urlCache = URLCache(memoryCapacity: 25_000_000, diskCapacity: 50_000_000, diskPath: temporaryDirectory)
+        URLCache.shared = urlCache
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateOrderBadge), name: MenuController.orderUpdatedNotification, object: nil)
         
-        orderTabBarItem = (self.window?.rootViewController as? UITabBarController)?.viewControllers?[1].tabBarItem
+        orderTabBarItem = (self.window!.rootViewController as! UITabBarController).viewControllers![1].tabBarItem
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
