@@ -17,22 +17,20 @@ extension CategoryTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        MenuController.shared.fetchCategories { (categories) in
-            if let categories = categories {
-                self.updateUI(with: categories)
-            }
-        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: MenuController.menuDataUpdateNotification, object: nil)
+        
+        updateUI()
     }
     
 }
 
 extension CategoryTableViewController {
     
-    private func updateUI(with categories: [String]) {
-        DispatchQueue.main.async {
-            self.categories = categories
-            self.tableView.reloadData()
-        }
+    @objc private func updateUI() {
+        categories = MenuController.shared.categories
+        
+        tableView.reloadData()
     }
     
     private func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {

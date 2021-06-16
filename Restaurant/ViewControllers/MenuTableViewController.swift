@@ -20,23 +20,22 @@ extension MenuTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = category.capitalized
-        MenuController.shared.fetchMenuItems(forCategory: category) { (menuItems) in
-            if let menuItems = menuItems {
-                self.updateUI(with: menuItems)
-            }
-        }
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: MenuController.menuDataUpdateNotification, object: nil)
+        
+        updateUI()
     }
     
 }
 
 extension MenuTableViewController {
     
-    private func updateUI(with menuItems: [MenuItem]) {
-        DispatchQueue.main.async {
-            self.menuItems = menuItems
-            self.tableView.reloadData()
-        }
+    @objc private func updateUI() {
+        guard let category = category else { return }
+        
+        title = category.capitalized
+        self.menuItems = MenuController.shared.items(forCategory: category) ?? []
+        
+        self.tableView.reloadData()
     }
     
     private func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
@@ -89,4 +88,23 @@ extension MenuTableViewController {
         }
     }
 
+}
+
+extension MenuTableViewController {
+    
+    override func encodeRestorableState(with coder: NSCoder) {
+        super.encodeRestorableState(with: coder)
+        
+        guard let category = category else { return }
+        
+        coder.encode(category, forKey: "category")
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
+        
+        category = coder.decodeObject(forKey: "category") as? String
+        updateUI()
+    }
+    
 }
