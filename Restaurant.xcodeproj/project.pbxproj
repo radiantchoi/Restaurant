@@ -21,6 +21,7 @@
 		4F1320112677B39900DA5885 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1320102677B39900DA5885 /* Order.swift */; };
 		4F1320132677B53600DA5885 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1320122677B53600DA5885 /* MenuController.swift */; };
 		4F56FBA42679255200BC85C3 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56FBA32679255200BC85C3 /* OrderConfirmationViewController.swift */; };
+		4FDFDA88269A097D0067331F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDFDA87269A097D0067331F /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4F1320102677B39900DA5885 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		4F1320122677B53600DA5885 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		4F56FBA32679255200BC85C3 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
+		4FDFDA87269A097D0067331F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,9 +74,9 @@
 		4F131FEC26779D5300DA5885 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
-				4FDFDA84269A086F0067331F /* Networking */,
 				4F131FF326779D5300DA5885 /* Main.storyboard */,
 				4FDFDA83269A08310067331F /* Application */,
+				4FDFDA84269A086F0067331F /* Networking */,
 				4F13200326779F1600DA5885 /* Assets */,
 			);
 			path = Restaurant;
@@ -127,6 +129,7 @@
 		4FDFDA84269A086F0067331F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				4FDFDA87269A097D0067331F /* NetworkManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FDFDA88269A097D0067331F /* NetworkManager.swift in Sources */,
 				4F1320132677B53600DA5885 /* MenuController.swift in Sources */,
 				4F13200D2677AD9400DA5885 /* MenuItem.swift in Sources */,
 				4F1320072677AB4900DA5885 /* MenuTableViewController.swift in Sources */,
