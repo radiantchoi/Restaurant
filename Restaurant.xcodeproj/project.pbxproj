@@ -72,12 +72,10 @@
 		4F131FEC26779D5300DA5885 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
-				4F131FED26779D5300DA5885 /* AppDelegate.swift */,
-				4F131FEF26779D5300DA5885 /* SceneDelegate.swift */,
+				4FDFDA84269A086F0067331F /* Networking */,
 				4F131FF326779D5300DA5885 /* Main.storyboard */,
+				4FDFDA83269A08310067331F /* Application */,
 				4F13200326779F1600DA5885 /* Assets */,
-				4F13200226779F0E00DA5885 /* ViewControllers */,
-				4F13200126779F0900DA5885 /* Models */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -113,6 +111,24 @@
 				4F131FF626779D5400DA5885 /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		4FDFDA83269A08310067331F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				4F131FED26779D5300DA5885 /* AppDelegate.swift */,
+				4F131FEF26779D5300DA5885 /* SceneDelegate.swift */,
+				4F13200226779F0E00DA5885 /* ViewControllers */,
+				4F13200126779F0900DA5885 /* Models */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		4FDFDA84269A086F0067331F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
