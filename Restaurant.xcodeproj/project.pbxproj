@@ -76,7 +76,6 @@
 			children = (
 				4F131FF326779D5300DA5885 /* Main.storyboard */,
 				4FDFDA83269A08310067331F /* Application */,
-				4FDFDA84269A086F0067331F /* Networking */,
 				4F13200326779F1600DA5885 /* Assets */,
 			);
 			path = Restaurant;
@@ -120,8 +119,9 @@
 			children = (
 				4F131FED26779D5300DA5885 /* AppDelegate.swift */,
 				4F131FEF26779D5300DA5885 /* SceneDelegate.swift */,
-				4F13200226779F0E00DA5885 /* ViewControllers */,
 				4F13200126779F0900DA5885 /* Models */,
+				4F13200226779F0E00DA5885 /* ViewControllers */,
+				4FDFDA84269A086F0067331F /* Networking */,
 			);
 			path = Application;
 			sourceTree = "<group>";

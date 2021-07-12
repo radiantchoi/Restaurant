@@ -8,11 +8,8 @@
 import Foundation
 
 class NetworkManager {
-    static let shared = NetworkManager(baseURL: )
+    static let shared = NetworkManager()
     
-    let baseURL: URL
+    private init() {}
     
-    private init(baseURL: URL) {
-        self.baseURL = baseURL
-    }
 }
