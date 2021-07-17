@@ -38,26 +38,41 @@ class MenuController {
 extension MenuController {
     
     func submitOrder(forMenuIDs menuIds: [Int], completion: @escaping (Int?) -> Void) {
-        let orderURL = baseURL.appendingPathComponent("order")
-        var request = URLRequest(url: orderURL)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let data: [String: [Int]] = ["menuIds": menuIds]
-        let jsonEncoder = JSONEncoder()
-        let jsonData = try? jsonEncoder.encode(data)
-        request.httpBody = jsonData
+//        let orderURL = baseURL.appendingPathComponent("order")
+//        var request = URLRequest(url: orderURL)
+//        request.httpMethod = "POST"
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        
+//        let data: [String: [Int]] = ["menuIds": menuIds]
+//        let jsonEncoder = JSONEncoder()
+//        let jsonData = try? jsonEncoder.encode(data)
+//        request.httpBody = jsonData
+//        
+//        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+//            let jsonDecoder = JSONDecoder()
+//            if let data = data,
+//               let preparationTime = try? jsonDecoder.decode(PreparationTime.self, from: data) {
+//                completion(preparationTime.prepTime)
+//            } else {
+//                completion(nil)
+//            }
+//        }
+//        task.resume()
         
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            let jsonDecoder = JSONDecoder()
-            if let data = data,
-               let preparationTime = try? jsonDecoder.decode(PreparationTime.self, from: data) {
+        NetworkManager.shared.post(NetworkRequestData: NetworkRequestData(
+                                    urlPath: "order",
+                                    httpMethod: .post,
+                                    data: ["menuIDs": menuIds]),
+                                   for: PreparationTime.self
+        ) {
+            switch $0 {
+            case .success(let preparationTime):
                 completion(preparationTime.prepTime)
-            } else {
+            case .failure(_):
                 completion(nil)
             }
         }
-        task.resume()
     }
     
     func fetchImage(url: URL, completion: @escaping (UIImage?) -> Void) {
