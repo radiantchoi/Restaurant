@@ -21,6 +21,7 @@
 		4F1320112677B39900DA5885 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1320102677B39900DA5885 /* Order.swift */; };
 		4F1320132677B53600DA5885 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1320122677B53600DA5885 /* MenuController.swift */; };
 		4F56FBA42679255200BC85C3 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F56FBA32679255200BC85C3 /* OrderConfirmationViewController.swift */; };
+		4F7FF02B26A48EC500EFE84D /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7FF02A26A48EC500EFE84D /* LocalStorage.swift */; };
 		4F9320E026A1E10400277EE0 /* NetworkRequestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9320DF26A1E10400277EE0 /* NetworkRequestData.swift */; };
 		4FDFDA88269A097D0067331F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDFDA87269A097D0067331F /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		4F1320102677B39900DA5885 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		4F1320122677B53600DA5885 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		4F56FBA32679255200BC85C3 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
+		4F7FF02A26A48EC500EFE84D /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		4F9320DF26A1E10400277EE0 /* NetworkRequestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestData.swift; sourceTree = "<group>"; };
 		4FDFDA87269A097D0067331F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 				4F1320082677AB7400DA5885 /* OrderTableViewController.swift */,
 				4F56FBA32679255200BC85C3 /* OrderConfirmationViewController.swift */,
 				4F1320122677B53600DA5885 /* MenuController.swift */,
+				4F7FF02A26A48EC500EFE84D /* LocalStorage.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -116,6 +119,13 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		4F7FF02926A4871900EFE84D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		4FDFDA83269A08310067331F /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 				4F13200126779F0900DA5885 /* Models */,
 				4F13200226779F0E00DA5885 /* ViewControllers */,
 				4FDFDA84269A086F0067331F /* Networking */,
+				4F7FF02926A4871900EFE84D /* Extensions */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -212,6 +223,7 @@
 				4F13200D2677AD9400DA5885 /* MenuItem.swift in Sources */,
 				4F1320072677AB4900DA5885 /* MenuTableViewController.swift in Sources */,
 				4F13200B2677AC4000DA5885 /* MenuItemDetailViewController.swift in Sources */,
+				4F7FF02B26A48EC500EFE84D /* LocalStorage.swift in Sources */,
 				4F1320112677B39900DA5885 /* Order.swift in Sources */,
 				4F1320092677AB7400DA5885 /* OrderTableViewController.swift in Sources */,
 				4F9320E026A1E10400277EE0 /* NetworkRequestData.swift in Sources */,

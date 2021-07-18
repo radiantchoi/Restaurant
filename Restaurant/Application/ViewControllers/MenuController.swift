@@ -123,48 +123,6 @@ extension MenuController {
 
 extension MenuController {
     
-    func loadOrder() {
-        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let orderFileURL = documentsDirectoryURL.appendingPathComponent("order").appendingPathExtension("json")
-        
-        guard let data = try? Data(contentsOf: orderFileURL) else { return }
-        order = (try? JSONDecoder().decode(Order.self, from: data)) ?? Order(menuItems: [])
-    }
-    
-    func saveOrder() {
-        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let orderFileURL = documentsDirectoryURL.appendingPathComponent("order").appendingPathExtension("json")
-        
-        if let data = try? JSONEncoder().encode(order) {
-            try? data.write(to: orderFileURL)
-        }
-    }
-    
-    func loadItems() {
-        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let menuItemsFileURL = documentsDirectoryURL.appendingPathComponent("menuItems").appendingPathExtension("json")
-        
-        guard let data = try? Data(contentsOf: menuItemsFileURL) else { return }
-        let items = (try? JSONDecoder().decode([MenuItem].self, from: data)) ?? []
-        
-        process(items)
-        
-    }
-    
-    func saveItems() {
-        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let menuItemsFileURL = documentsDirectoryURL.appendingPathComponent("menuItems").appendingPathExtension("json")
-        
-        let items = Array(itemsByID.values)
-        if let data = try? JSONEncoder().encode(items) {
-            try? data.write(to: menuItemsFileURL)
-        }
-    }
-    
-}
-
-extension MenuController {
-    
     func item(withID itemID: Int) -> MenuItem? {
         return itemsByID[itemID]
     }
@@ -174,3 +132,48 @@ extension MenuController {
     }
     
 }
+
+
+extension MenuController {
+    
+//    func loadOrder() {
+//        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+//        let orderFileURL = documentsDirectoryURL.appendingPathComponent("order").appendingPathExtension("json")
+//        
+//        guard let data = try? Data(contentsOf: orderFileURL) else { return }
+//        order = (try? JSONDecoder().decode(Order.self, from: data)) ?? Order(menuItems: [])
+//    }
+//    
+//    func saveOrder() {
+//        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+//        let orderFileURL = documentsDirectoryURL.appendingPathComponent("order").appendingPathExtension("json")
+//        
+//        if let data = try? JSONEncoder().encode(order) {
+//            try? data.write(to: orderFileURL)
+//        }
+//    }
+//    
+//    func loadItems() {
+//        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+//        let menuItemsFileURL = documentsDirectoryURL.appendingPathComponent("menuItems").appendingPathExtension("json")
+//        
+//        guard let data = try? Data(contentsOf: menuItemsFileURL) else { return }
+//        let items = (try? JSONDecoder().decode([MenuItem].self, from: data)) ?? []
+//        
+//        process(items)
+//        
+//    }
+//    
+//    func saveItems() {
+//        let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+//        let menuItemsFileURL = documentsDirectoryURL.appendingPathComponent("menuItems").appendingPathExtension("json")
+//        
+//        let items = Array(itemsByID.values)
+//        if let data = try? JSONEncoder().encode(items) {
+//            try? data.write(to: menuItemsFileURL)
+//        }
+//    }
+    
+}
+
+
