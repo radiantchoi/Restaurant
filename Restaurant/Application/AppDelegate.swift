@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        MenuController.shared.loadOrder()
-        MenuController.shared.loadItems()
+//        MenuController.shared.loadOrder()
+//        MenuController.shared.loadItems()
         
         MenuController.shared.loadRemoteData()
         
@@ -29,8 +29,8 @@ extension AppDelegate {
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
-        MenuController.shared.saveOrder()
-        MenuController.shared.saveItems()
+//        MenuController.shared.saveOrder()
+//        MenuController.shared.saveItems()
     }
     
     func application(_application: UIApplication, shouldSaveApplicationState: NSCoder) -> Bool {

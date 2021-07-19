@@ -9,6 +9,8 @@ import Foundation
 
 struct LocalStorage {
     
+    static let shared = LocalStorage()
+    
     func loadOrder() -> Order? {
         let documentsDirectoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let orderFileURL = documentsDirectoryURL.appendingPathComponent("order").appendingPathExtension("json")
