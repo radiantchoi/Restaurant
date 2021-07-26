@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIImageView {
-    func fetchImage(url: URL, completion: @escaping (UIImage?) -> Void) {
+    func fetchImage(url: URL) {
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             guard let data = data,
                   let image = UIImage(data: data) else {

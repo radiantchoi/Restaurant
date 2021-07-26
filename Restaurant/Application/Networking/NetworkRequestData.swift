@@ -11,7 +11,7 @@ struct NetworkRequestData {
     var baseURL: URL = URL(string: "http://localhost:8090/")!
     var urlPath: String
     var httpMethod: HTTPMethod
-    var data: [String: Any]
+    var data: [String: Any]?
 }
 
 

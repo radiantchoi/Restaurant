@@ -75,19 +75,19 @@ extension MenuController {
         }
     }
     
-    func fetchImage(url: URL, completion: @escaping (UIImage?) -> Void) {
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let data = data,
-                let image = UIImage(data: data) {
-                completion(image)
-            } else {
-                completion(nil)
-            }
-        }
-        
-        task.resume()
-        
-    }
+//    func fetchImage(url: URL, completion: @escaping (UIImage?) -> Void) {
+//        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            if let data = data,
+//                let image = UIImage(data: data) {
+//                completion(image)
+//            } else {
+//                completion(nil)
+//            }
+//        }
+//        
+//        task.resume()
+//        
+//    }
     
     private func process(_ items: [MenuItem]) {
         itemsByID.removeAll()
@@ -104,18 +104,32 @@ extension MenuController {
     }
     
     func loadRemoteData() {
-        let initialMenuURL = baseURL.appendingPathComponent("menu")
-        let components = URLComponents(url: initialMenuURL, resolvingAgainstBaseURL: true)!
-        let menuURL = components.url!
+//        let initialMenuURL = baseURL.appendingPathComponent("menu")
+//        let components = URLComponents(url: initialMenuURL, resolvingAgainstBaseURL: true)!
+//        let menuURL = components.url!
+//
+//        let task = URLSession.shared.dataTask(with: menuURL) { (data, _, _) in
+//            let jsonDecoder = JSONDecoder()
+//            if let data = data, let menuItems = try? jsonDecoder.decode(MenuItems.self, from: data) {
+//                self.process(menuItems.items)
+//            }
+//        }
+//
+//        task.resume()
         
-        let task = URLSession.shared.dataTask(with: menuURL) { (data, _, _) in
-            let jsonDecoder = JSONDecoder()
-            if let data = data, let menuItems = try? jsonDecoder.decode(MenuItems.self, from: data) {
+        NetworkManager.shared.get(NetworkRequestData: NetworkRequestData(
+                                    urlPath: "menu",
+                                    httpMethod: .get,
+                                    data: nil),
+                                  for: MenuItems.self
+        ) {
+            switch $0 {
+            case .success(let menuItems):
                 self.process(menuItems.items)
+            case .failure(_):
+                return
             }
         }
-        
-        task.resume()
     }
     
 }
