@@ -60,7 +60,7 @@ extension MenuController {
 //        }
 //        task.resume()
         
-        NetworkManager.shared.post(NetworkRequestData: NetworkRequestData(
+        NetworkManager.shared.request(networkRequestData: NetworkRequestData(
                                     urlPath: "order",
                                     httpMethod: .post,
                                     data: ["menuIDs": menuIds]),
@@ -117,7 +117,7 @@ extension MenuController {
 //
 //        task.resume()
         
-        NetworkManager.shared.get(NetworkRequestData: NetworkRequestData(
+        NetworkManager.shared.request(networkRequestData: NetworkRequestData(
                                     urlPath: "menu",
                                     httpMethod: .get,
                                     data: nil),
