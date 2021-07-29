@@ -71,8 +71,7 @@ extension MenuController {
                 completion(preparationTime.prepTime)
             case .failure(_):
                 completion(nil)
-                // Error occured point - network request failed
-                // [connection] nw_socket_handle_socket_event [C3.1:2] Socket SO_ERROR [61: Connection refused]
+                // Error
             }
         }
     }

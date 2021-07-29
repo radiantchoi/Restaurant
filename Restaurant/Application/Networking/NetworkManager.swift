@@ -104,6 +104,7 @@ extension NetworkManager {
                     completion(.failure(error))
                 } else {
                     completion(.failure(UnknownNetworkError()))
+                    // Error
                 }
                 return
             }
