@@ -63,7 +63,7 @@ extension MenuController {
         NetworkManager.shared.request(networkRequestData: NetworkRequestData(
                                     urlPath: "order",
                                     httpMethod: .post,
-                                    data: ["menuIDs": menuIds]),
+                                    data: ["menuIds": menuIds]),
                                    for: PreparationTime.self
         ) {
             switch $0 {

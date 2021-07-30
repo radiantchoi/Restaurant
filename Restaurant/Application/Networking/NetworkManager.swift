@@ -92,9 +92,13 @@ extension NetworkManager {
         if networkRequestData.httpMethod == .post {
             
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            
             let jsonData = try? JSONSerialization.data(withJSONObject: networkRequestData.data!)
             request.httpBody = jsonData
+//            let data = networkRequestData.data
+//            let jsonEncoder = JSONEncoder()
+//            let jsonData = try? jsonEncoder.encode(data)
+//            request.httpBody = jsonData
+            
         }
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -104,7 +108,7 @@ extension NetworkManager {
                     completion(.failure(error))
                 } else {
                     completion(.failure(UnknownNetworkError()))
-                    // Error
+                    // Error while submitting order
                 }
                 return
             }

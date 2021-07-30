@@ -12,8 +12,8 @@ struct NetworkRequestData {
     var urlPath: String
     var httpMethod: HTTPMethod
     var data: [String: Any]?
+    
 }
-
 
 enum HTTPMethod: String {
     case post = "POST"
